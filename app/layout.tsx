@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +14,40 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="flex flex-col gap-16 pt-4 bg-gray-50 dark:bg-gray-950">
+        <header>
+          <div className="flex max-w-[1200px] mx-auto justify-between items-center gap-4 text-gray-800 dark:text-gray-200">
+            <Link href="/" className="font-bold text-xl px-4 flex gap-4 items-center">
+              <div className="w-10 h-10 bg-gray-500 rounded-full"></div>
+              L&C Gebäudetechnik
+            </Link>
+
+            <nav className="hidden sm:flex gap-2 font-semibold">
+              <Link className="px-4 py-6" href="#dienstleistungen">Dienstleistungen</Link>
+              <Link className="px-4 py-6" href="#ueber-uns">Über uns</Link>
+              <Link className="px-4 py-6" href="#kontakt">Kontakt</Link>
+            </nav>
+          </div>
+        </header>
+        <main className="flex flex-1 flex-col items-center w-full mx-auto">
+          {children}
+        </main>
+        <footer className="bg-white">
+          <div className="max-w-[1200px] mx-auto flex justify-between items-end gap-8 py-8">
+            <div className="max-w-96">
+              <h2 className="font-bold text-sm">L&C Gebäudetechnik</h2>
+              <p className="text-sm text-gray-600">Wir sind auf Heizungs- und Gebäudetechnik Lösungen spezialisiert, die Ihren Komfort und Ihre Effizienz steigern. Ob Sie Heizungsrestaurierung, Reparaturen, Austausch oder regelmäßige Wartung und Inspektion benötigen, unser Team erfahrener Techniker steht Ihnen zur Verfügung. </p>
+            </div>
+            <div>
+              <ul className="flex gap-8 text-gray-800 text-sm">
+                <li><Link href="/agb">AGB & Rechtliches</Link></li>
+                <li><Link href="/impressum">Impressum</Link></li>
+                <li><Link href="/datenschutz">Datenschutz</Link></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      </body>
     </html>
   );
 }
