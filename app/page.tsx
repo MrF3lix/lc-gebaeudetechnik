@@ -1,4 +1,4 @@
-import { Button } from "@/components/Button";
+import { Button, LinkButton } from "@/components/Button";
 import { ArrowPathIcon, ClipboardDocumentCheckIcon, UserGroupIcon } from "@heroicons/react/24/outline";
 import { WrenchIcon } from "@heroicons/react/24/outline";
 import { BuildingOfficeIcon } from "@heroicons/react/24/outline";
@@ -17,7 +17,9 @@ export default function Home() {
             Ob Sie Heizungsrestaurierung, Reparaturen, Austausch oder regelmäßige Wartung und Inspektion benötigen, unser Team erfahrener Techniker steht Ihnen zur Verfügung.
           </p>
 
-          <Button className="self-center mt-2">Jetzt Offerte Einholen</Button>
+          <LinkButton href="mailto:info@lc-gebaeudetechnik.ch" className="self-center mt-2">
+            Jetzt Offerte Einholen
+          </LinkButton>
         </div>
       </section>
       <section className="w-full h-96 relative rounded-xl max-w-[1200px] py-16">

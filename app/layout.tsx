@@ -16,7 +16,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className="flex flex-col gap-16 pt-4 pb-0 bg-gray-50 dark:bg-gray-950">
+      <body className="flex flex-col gap-16 pt-4 pb-0 bg-gray-50 dark:bg-gray-950 min-h-[100vh]">
         <header>
           <div className="flex max-w-[1200px] mx-auto justify-between items-center gap-4 text-gray-800 dark:text-gray-200">
             <Link href="/" className="font-bold text-xl px-4 flex gap-4 items-center">
@@ -34,14 +34,14 @@ export default function RootLayout({
         <main className="flex flex-1 flex-col items-center w-full mx-auto">
           {children}
         </main>
-        <footer className="bg-white">
+        <footer className="bg-white dark:bg-black">
           <div className="max-w-[1200px] mx-auto flex justify-between items-end gap-8 py-8 px-8 lg:flex-nowrap flex-wrap">
             <div className="max-w-96">
               <h2 className="font-bold text-sm">L&C Gebäudetechnik</h2>
               <p className="text-sm text-gray-600">Wir sind auf Heizungs- und Gebäudetechnik Lösungen spezialisiert, die Ihren Komfort und Ihre Effizienz steigern. Ob Sie Heizungsrestaurierung, Reparaturen, Austausch oder regelmäßige Wartung und Inspektion benötigen, unser Team erfahrener Techniker steht Ihnen zur Verfügung. </p>
             </div>
             <div>
-              <ul className="flex gap-8 text-gray-800 text-sm sm:flex-nowrap flex-wrap">
+              <ul className="flex gap-8 text-gray-800 dark:text-gray-200 text-sm sm:flex-nowrap flex-wrap">
                 <li><Link href="/agb">AGB & Rechtliches</Link></li>
                 <li><Link href="/impressum">Impressum</Link></li>
                 <li><Link href="/datenschutz">Datenschutz</Link></li>
