@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <section className="w-full flex justify-center py-16">
+      <section className="w-full flex justify-center py-16 px-8">
         <div className="flex flex-col gap-4 text-center max-w-[550px]">
           <h1 className="text-4xl">Wärme, Präzision, Exzellenz<br /><span className="font-bold">L&C Gebäudetechnik</span></h1>
           <p className="text-lg">
@@ -33,7 +33,7 @@ export default function Home() {
           alt="Title Image"
         />
       </section>
-      <section className="bg-white dark:bg-black w-full flex flex-col gap-16 items-center justify-center py-16">
+      <section id="dienstleistung" className="bg-white dark:bg-black w-full flex flex-col gap-16 items-center justify-center py-16 px-8">
         <div className="flex flex-col items-center gap-4 text-center max-w-[550px]">
           <BuildingOfficeIcon className="w-8 h-8 text-center" />
           <h2 className="text-2xl font-extrabold">Unsere Dienstleistungen</h2>
@@ -41,8 +41,8 @@ export default function Home() {
             Unser umfassendes Angebot an professionellen Dienstleistungen richtet sich an eine vielfältige Klientel, die vom Eigenheimbesitzer bis zum gewerblichen Bauträger reicht.
           </p>
         </div>
-        <div className="flex gap-12 max-w-[1200px]">
-          <div className="flex flex-col text-left gap-4">
+        <div className="flex gap-12 max-w-[1200px] lg:flex-nowrap flex-wrap">
+          <div className="flex flex-col text-left gap-4 w-full">
             <WrenchIcon className="w-6 h-6" />
             <h3 className="font-extrabold">Heizungsrestaurierung</h3>
             <p className="">Vertrauen Sie uns, um Ihre Heizsysteme wieder zum Leben zu erwecken. Wir stellen Wärme und Funktionalität wieder her und sorgen dafür, dass Ihr Raum gemütlich bleibt.</p>
@@ -59,9 +59,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-black dark:bg-white w-full flex flex-col gap-16 items-center justify-center py-32">
+      <section className="bg-black dark:bg-white w-full flex flex-col gap-16 items-center justify-center py-32 px-8">
         <div className="flex flex-col items-center gap-8 text-center max-w-[550px]">
-          <h2 className="text-4xl font-extrabold italic text-white dark:text-black text-center">“Für schnelle, zuverlässige Heizungsreparaturen ist L&C Gebäudetechnik meine erste Wahl!”</h2>
+          <h2 className="sm:text-4xl text-3xl font-extrabold italic text-white dark:text-black text-center">“Für schnelle, zuverlässige Heizungsreparaturen ist L&C Gebäudetechnik meine erste Wahl!”</h2>
 
           <p className="text-white dark:text-black">
             A. Schmidth
@@ -70,7 +70,7 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section className="bg-white dark:bg-black w-full flex flex-col gap-16 items-center justify-center py-16">
+      <section id="ueber-uns" className="bg-white dark:bg-black w-full flex flex-col gap-16 items-center justify-center py-16 px-8">
         <div className="flex flex-col items-center gap-4 text-center max-w-[550px]">
           <UserGroupIcon className="w-8 h-8 text-center" />
           <h2 className="text-2xl font-extrabold">Über uns</h2>
@@ -78,22 +78,22 @@ export default function Home() {
             Unser umfassendes Angebot an professionellen Dienstleistungen richtet sich an eine vielfältige Klientel, die vom Eigenheimbesitzer bis zum gewerblichen Bauträger reicht.
           </p>
         </div>
-        <div className="flex gap-12 max-w-[1200px]">
+        <div className="flex gap-12 max-w-[1200px] lg:flex-nowrap flex-wrap">
           <div className="flex flex-col items-center text-center gap-4">
-            <div className="w-52 h-52 bg-gray-200 rounded-full"></div>
-            <h3 className="text-4xl font-bold">L. Salvatore</h3>
+            <div className="sm:w-52 sm:h-52 w-40 h-40 bg-gray-200 rounded-full"></div>
+            <h3 className="text-4xl font-bold">Leonardo Salvatore</h3>
             <p className="font-light text-xl">Inhaber & Leiter Verkauf</p>
             <p className="">Vertrauen Sie uns, um Ihre Heizsysteme wieder zum Leben zu erwecken. Wir stellen Wärme und Funktionalität wieder her und sorgen dafür, dass Ihr Raum gemütlich bleibt.</p>
           </div>
           <div className="flex flex-col items-center text-center gap-4">
-            <div className="w-52 h-52 bg-gray-200 rounded-full"></div>
+            <div className="sm:w-52 sm:h-52 w-40 h-40 bg-gray-200 rounded-full"></div>
             <h3 className="text-4xl font-bold">Cosimo Ardito</h3>
             <p className="font-light text-xl">Inhaber & Leiter Installation</p>
             <p className="">Regelmäßige Wartung ist der Schlüssel zur optimalen Leistung. Unsere gründlichen Inspektionen sorgen dafür, dass Ihre Systeme das ganze Jahr über reibungslos laufen.</p>
           </div>
         </div>
       </section>
-      <section className="w-full flex flex-col gap-16 items-center justify-center py-16 pb-0">
+      <section id="kontakt" className="w-full flex flex-col gap-16 items-center justify-center py-16 pb-0 px-8">
         <div className="bg-white dark:bg-black w-full relative rounded-xl max-w-[1200px] p-12 flex flex-col gap-4">
           <h2 className="text-4xl font-light">Kontakt</h2>
 

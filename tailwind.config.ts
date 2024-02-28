@@ -11,6 +11,7 @@ const config: Config = {
       'none': '0',
       'sm': '0.125rem',
       DEFAULT: '0.25rem',
+      'md': '0.25rem',
       'lg': '0.5rem',
       'full': '9999px',
       'xl': 'min(1.5rem, 2vw)',
