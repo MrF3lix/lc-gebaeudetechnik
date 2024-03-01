@@ -101,7 +101,7 @@ export default function Home() {
 
           <div className="">
             <p>L&C Gebäudetechnik</p>
-            <p>Schnuppistrasse 6</p>
+            <p>Schuppisstrasse 6</p>
             <p>9016 St. Gallen</p>
             <Link href="mailto:info@lc-gebaeudetechnik.ch" className="text-sky-700 dark:text-sky-300 underline">info@lc-gebaeudetechnik.ch</Link>
           </div>
