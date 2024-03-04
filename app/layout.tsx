@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
 import { NavLink } from "@/components/NavLink";
+import { Head } from "next/document";
+import { Logo } from "@/components/Logo";
+import { MetaData } from "@/components/MetaData";
 
 export const metadata: Metadata = {
   title: "L&C Gebäudetechnik",
@@ -16,25 +19,28 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <MetaData />
       <body className="flex flex-col gap-16 pt-4 pb-0 bg-gray-50 dark:bg-gray-950 min-h-[100vh]">
         <header>
           <div className="flex max-w-[1200px] mx-auto justify-between items-center gap-4 text-gray-800 dark:text-gray-200">
             <Link href="/" className="font-bold text-xl px-4 flex gap-4 items-center">
-              <div className="w-10 h-10 bg-gray-500 rounded-full"></div>
+              <div className="w-10 h-10 bg-transparent rounded-full">
+                <Logo />
+              </div>
               L&C Gebäudetechnik
             </Link>
 
-            <nav className="hidden md:flex gap-2 font-semibold">
+            {/* <nav className="hidden md:flex gap-2 font-semibold">
               <NavLink elementId="dienstleistung">Dienstleistungen</NavLink>
               <NavLink elementId="ueber-uns">Über uns</NavLink>
               <NavLink elementId="kontakt">Kontakt</NavLink>
-            </nav>
+            </nav> */}
           </div>
         </header>
         <main className="flex flex-1 flex-col items-center w-full mx-auto">
           {children}
         </main>
-        <footer className="bg-white dark:bg-black">
+        {/* <footer className="bg-white dark:bg-black">
           <div className="max-w-[1200px] mx-auto flex justify-between items-end gap-8 py-8 px-8 lg:flex-nowrap flex-wrap">
             <div className="max-w-96">
               <h2 className="font-bold text-sm">L&C Gebäudetechnik</h2>
@@ -48,7 +54,7 @@ export default function RootLayout({
               </ul>
             </div>
           </div>
-        </footer>
+        </footer> */}
       </body>
     </html>
   );
