@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
 import { NavLink } from "@/components/NavLink";
-import { Head } from "next/document";
 import { Logo } from "@/components/Logo";
 import { MetaData } from "@/components/MetaData";
 
