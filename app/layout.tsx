@@ -4,6 +4,7 @@ import Link from "next/link";
 import { NavLink } from "@/components/NavLink";
 import { Logo } from "@/components/Logo";
 import { MetaData } from "@/components/MetaData";
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: "L&C Gebäudetechnik",
@@ -18,6 +19,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <Analytics/>
       <MetaData />
       <body className="flex flex-col gap-16 pt-4 pb-0 bg-gray-50 dark:bg-gray-950 min-h-[100vh]">
         <header>
