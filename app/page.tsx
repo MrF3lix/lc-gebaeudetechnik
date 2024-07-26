@@ -13,13 +13,11 @@ export default function Home() {
     <>
       <section className="w-full flex justify-center py-16 px-8">
         <div className="flex flex-col gap-4 text-center max-w-[550px]">
-          <h1 className="text-4xl">Wärme, Präzision, Exzellenz<br /><span className="font-bold">L&C Gebäudetechnik</span></h1>
+          <h1 className="text-3xl">Wärme, Präzision, Exzellenz<br /><span className="font-bold">L&C Gebäudetechnik</span></h1>
           <p className="text-lg">
-            Langjährige Erfahrungen und ein fundiertes Know-how.
+            Langjährige Erfahrung und fundiertes Know-how.
             <br />
-            Mit unseren Dienstleistungen erhalten Sie innovative und nachhaltige Lösungen für Ihre Heizungsanlage, Ihr Badezimmer,
-            <br />
-            Ihre Lüftungs- und Klimaanlage und Ihre Solaranlage.
+            Mit unseren Dienstleistungen erhalten Sie innovative und nachhaltige Lösungen für Ihre Heizungsanlage, Ihr Badezimmer, Ihre Lüftungs- und Klimaanlage sowie Ihre Solaranlage.
           </p>
 
           <LinkButton href="mailto:info@lc-gebaeudetechnik.ch" className="self-center mt-2">
@@ -95,7 +93,7 @@ export default function Home() {
         </div>
         <div className="max-w-[1200px] w-full">
           <div className="overflow-x-auto flex gap-12 py-8 snap-mandatory snap-x">
-            <Project 
+            <Project
               image={
                 <Image
                   src="/assets/images/project_aadorf_friedauweg.png"
@@ -108,7 +106,7 @@ export default function Home() {
               title="Friedauweg 2+4, Aadorf"
               description="Installation Sonnenkollektoren für die Warmwasser gewinnung."
             />
-            <Project 
+            <Project
               image={
                 <Image
                   src="/assets/images/project_degersheim_bergstrasse_29.png"
@@ -121,7 +119,7 @@ export default function Home() {
               title="Bergstrasse 29, Degersheim"
               description="Heizungssarnierung"
             />
-            <Project 
+            <Project
               image={
                 <Image
                   src="/assets/images/project_degersheim_kähbachstrasse_11.png"
@@ -134,7 +132,7 @@ export default function Home() {
               title="Kähbachstrasse 11, Degersheim"
               description="Waschtisch Umbau"
             />
-            <Project 
+            <Project
               image={
                 <Image
                   src="/assets/images/project_kornhausstrasse_25.png"
@@ -147,7 +145,7 @@ export default function Home() {
               title="Kornhausstrasse 25, St. Gallen"
               description="Energieagentur St. Gallen"
             />
-            <Project 
+            <Project
               image={
                 <Image
                   src="/assets/images/project_windeggstrasse_12.png"

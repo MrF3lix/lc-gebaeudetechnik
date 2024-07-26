@@ -7,8 +7,8 @@ import { MetaData } from "@/components/MetaData";
 import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
-  title: "L&C Gebäudetechnik",
-  description: "Wir sind auf Heizungs- und Gebäudetechnik Lösungen spezialisiert, die Ihren Komfort und Ihre Effizienz steigern. Ob Sie Heizungsrestaurierung, Reparaturen, Austausch oder regelmäßige Wartung und Inspektion benötigen, unser Team erfahrener Techniker steht Ihnen zur Verfügung.",
+  title: "L&C Gebäudetechnik GmbH",
+  description: "Langjährige Erfahrung und fundiertes Know-how. Mit unseren Dienstleistungen erhalten Sie innovative und nachhaltige Lösungen für Ihre Heizungsanlage, Ihr Badezimmer, Ihre Lüftungs- und Klimaanlage sowie Ihre Solaranlage.",
 };
 
 export default function RootLayout({
@@ -45,9 +45,9 @@ export default function RootLayout({
           <div className="max-w-[1200px] mx-auto flex justify-between items-end gap-8 py-8 px-8 lg:flex-nowrap flex-wrap">
             <div className="max-w-96">
               <h2 className="font-bold text-sm">L&C Gebäudetechnik</h2>
-              <p className="text-sm text-gray-600">Langjährige Erfahrungen und ein fundiertes Know-how.
-                Mit unseren Dienstleistungen erhalten Sie innovative und nachhaltige Lösungen für Ihre Heizungsanlage, Ihr Badezimmer,
-                Ihre Lüftungs- und Klimaanlage und Ihre Solaranlage.
+              <p className="text-sm text-gray-600">
+              Langjährige Erfahrung und fundiertes Know-how.
+              Mit unseren Dienstleistungen erhalten Sie innovative und nachhaltige Lösungen für Ihre Heizungsanlage, Ihr Badezimmer, Ihre Lüftungs- und Klimaanlage sowie Ihre Solaranlage.
               </p>
             </div>
             <div>
