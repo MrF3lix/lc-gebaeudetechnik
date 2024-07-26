@@ -5,7 +5,6 @@ import { NavLink } from "@/components/NavLink";
 import { Logo } from "@/components/Logo";
 import { MetaData } from "@/components/MetaData";
 import { Analytics } from "@vercel/analytics/react"
-import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "L&C Gebäudetechnik",

@@ -7,7 +7,7 @@ export const NavLink = ({ elementId, children }: any) => {
     }
 
     return (
-        <div className="px-4 py-6" onClick={() => scrollTo(elementId)}>
+        <div className="px-4 py-6 cursor-pointer" onClick={() => scrollTo(elementId)}>
             {children}
         </div>
     )

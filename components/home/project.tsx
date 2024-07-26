@@ -8,7 +8,7 @@ interface ProjectProps {
 
 export const Project = ({ title, description, image }: ProjectProps) => {
     return (
-        <div className="snap-center flex flex-col min-w-96 w-full rounded-lg border-gray-200 border">
+        <div className="snap-center flex flex-col min-w-full md:min-w-96 w-full rounded-lg border-gray-200 border">
             <div className="w-full h-60 relative rounded-t-lg overflow-hidden">
                 {image}
             </div>

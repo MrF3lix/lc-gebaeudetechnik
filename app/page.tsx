@@ -94,7 +94,7 @@ export default function Home() {
           </p>
         </div>
         <div className="max-w-[1200px] w-full">
-          <div className="overflow-x-auto flex gap-12 py-8 snap-proximity snap-x">
+          <div className="overflow-x-auto flex gap-12 py-8 snap-mandatory snap-x">
             <Project 
               image={
                 <Image
