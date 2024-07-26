@@ -19,7 +19,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <Analytics/>
+      <Analytics />
       <MetaData />
       <body className="flex flex-col gap-16 pt-4 pb-0 bg-gray-50 dark:bg-gray-950 min-h-[100vh]">
         <header>
@@ -31,31 +31,34 @@ export default function RootLayout({
               L&C Gebäudetechnik
             </Link>
 
-            {/* <nav className="hidden md:flex gap-2 font-semibold">
+            <nav className="hidden md:flex gap-2 font-semibold">
               <NavLink elementId="dienstleistung">Dienstleistungen</NavLink>
               <NavLink elementId="ueber-uns">Über uns</NavLink>
               <NavLink elementId="kontakt">Kontakt</NavLink>
-            </nav> */}
+            </nav>
           </div>
         </header>
         <main className="flex flex-1 flex-col items-center w-full mx-auto">
           {children}
         </main>
-        {/* <footer className="bg-white dark:bg-black">
+        <footer className="bg-white dark:bg-black">
           <div className="max-w-[1200px] mx-auto flex justify-between items-end gap-8 py-8 px-8 lg:flex-nowrap flex-wrap">
             <div className="max-w-96">
               <h2 className="font-bold text-sm">L&C Gebäudetechnik</h2>
-              <p className="text-sm text-gray-600">Wir sind auf Heizungs- und Gebäudetechnik Lösungen spezialisiert, die Ihren Komfort und Ihre Effizienz steigern. Ob Sie Heizungsrestaurierung, Reparaturen, Austausch oder regelmäßige Wartung und Inspektion benötigen, unser Team erfahrener Techniker steht Ihnen zur Verfügung. </p>
+              <p className="text-sm text-gray-600">Langjährige Erfahrungen und ein fundiertes Know-how.
+                Mit unseren Dienstleistungen erhalten Sie innovative und nachhaltige Lösungen für Ihre Heizungsanlage, Ihr Badezimmer,
+                Ihre Lüftungs- und Klimaanlage und Ihre Solaranlage.
+              </p>
             </div>
             <div>
               <ul className="flex gap-8 text-gray-800 dark:text-gray-200 text-sm sm:flex-nowrap flex-wrap">
-                <li><Link href="/agb">AGB & Rechtliches</Link></li>
+                {/* <li><Link href="/agb">AGB & Rechtliches</Link></li> */}
                 <li><Link href="/impressum">Impressum</Link></li>
                 <li><Link href="/datenschutz">Datenschutz</Link></li>
               </ul>
             </div>
           </div>
-        </footer> */}
+        </footer>
       </body>
     </html>
   );
