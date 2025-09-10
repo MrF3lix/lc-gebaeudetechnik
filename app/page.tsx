@@ -96,6 +96,19 @@ export default function Home() {
             <Project
               image={
                 <Image
+                  src="/assets/images/project_ziegelei_quartier.jpg"
+                  priority={false}
+                  fill={true}
+                  style={{ objectFit: "cover" }}
+                  alt="Title Image"
+                />
+              }
+              title="Ziegelei Quartier, Berg TG"
+              description="Die erste Etappe der Überbauung Ziegelei-Quartier wurde erfolgreich abgeschlossen und übergeben. Nun starten wir mit der nächsten Etappe - den Häusern C bis F."
+            />
+            <Project
+              image={
+                <Image
                   src="/assets/images/project_aadorf_friedauweg.png"
                   priority={false}
                   fill={true}
