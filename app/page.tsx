@@ -209,8 +209,8 @@ export default function Home() {
 
           <div className="flex flex-col">
             <p>L&C Gebäudetechnik</p>
-            <p>Schuppisstrasse 6</p>
-            <p>9016 St. Gallen</p>
+            <p>Industriestrasse 15</p>
+            <p>9015 St. Gallen</p>
             <a className="text-sky-700 dark:text-sky-300 underline" href="tel:+41 71 252 55 45">+41 71 252 55 45</a>
             <Link href="mailto:info@lc-gebaeudetechnik.ch" className="text-sky-700 dark:text-sky-300 underline">info@lc-gebaeudetechnik.ch</Link>
           </div>

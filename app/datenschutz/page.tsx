@@ -27,8 +27,8 @@ export default function Datenschutz() {
       <br />
       <div className="flex flex-col">
         <p>L&C Gebäudetechnik GmbH</p>
-        <p>Schuppisstrasse 6</p>
-        <p>9016 St. Gallen</p>
+        <p>Industriestrasse 15</p>
+        <p>9015 St. Gallen</p>
         <br />
         <strong>Datenschutzverantwortliche Person:</strong>
         <p>Cosimo Ardito</p>
