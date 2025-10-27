@@ -33,7 +33,7 @@ export default function Datenschutz() {
         <strong>Datenschutzverantwortliche Person:</strong>
         <p>Cosimo Ardito</p>
         <a className="text-sky-700 dark:text-sky-300 underline" href="tel:+41 78 303 07 09">+41 78 303 07 09</a>
-        <Link href="mailto:c.ardito@lc-gebäudetechnik.ch" className="text-sky-700 dark:text-sky-300 underline">c.ardito@lc-gebäudetechnik.ch</Link>
+        <Link href="mailto:c.ardito@lc-gebaeudetechnik.ch" className="text-sky-700 dark:text-sky-300 underline">c.ardito@lc-gebaeudetechnik.ch</Link>
       </div>
       <br />
       <h3 className="text-xl font-bold">3. Allgemeine Grundsätze</h3>
@@ -103,14 +103,14 @@ export default function Datenschutz() {
       <p>Sind Sie von der Bearbeitung personenbezogener Daten betroffen, haben Sie das Recht, Ihre Rechte gerichtlich durchzusetzen oder bei der zuständigen Aufsichtsbehörde eine Meldung einzureichen. Die zuständige Aufsichtsbehörde in der Schweiz ist der Eidgenössische Datenschutz- und Öffentlichkeitsbeauftragte: <Link href="https://www.edoeb.admin.ch" className="text-sky-700 dark:text-sky-300 underline">https://www.edoeb.admin.ch</Link></p>
       <br />
       <h4 className="text-lg font-bold">3.8 Änderungen an der Datenschutzerklärung</h4>
-      <p>Wir können diese Datenschutzerklärung jederzeit ändern. Die Änderungen werden auf lc-gebäudetechnik.ch veröffentlicht, Sie werden nicht gesondert darüber informiert.</p>
+      <p>Wir können diese Datenschutzerklärung jederzeit ändern. Die Änderungen werden auf lc-gebaeudetechnik.ch veröffentlicht, Sie werden nicht gesondert darüber informiert.</p>
       <br />
       <h3 className="text-xl font-bold">4. Einzelne Datenverarbeitungsvorgänge</h3>
       <br />
       <h4 className="text-lg font-bold">4.1 Bereitstellen der Webseite und Erstellung von Logfiles</h4>
       <br />
       <h5 className="text-md font-bold">Welche Informationen erhalten wir und wie nutzen wir sie?</h5>
-      <p>Indem Sie lc-gebäudetechnik.ch besuchen, werden auf unseren Servern oder auf Servern von Dienstleistungen und Produkten, die wir beziehen und / oder installiert haben, bestimmte Daten automatisch zu Zwecken der Systemadministration, für statistische oder für Sicherungszwecke oder für Trackingzwecke gespeichert. Es handelt sich dabei um:</p>
+      <p>Indem Sie lc-gebaeudetechnik.ch besuchen, werden auf unseren Servern oder auf Servern von Dienstleistungen und Produkten, die wir beziehen und / oder installiert haben, bestimmte Daten automatisch zu Zwecken der Systemadministration, für statistische oder für Sicherungszwecke oder für Trackingzwecke gespeichert. Es handelt sich dabei um:</p>
       <ul>
         <li>den Namen Ihres Internetserviceproviders;</li>
         <li>Ihre IP-Adresse (unter Umständen);</li>

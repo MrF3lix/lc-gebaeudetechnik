@@ -189,7 +189,7 @@ export default function Home() {
             name="Leonardo Salvatore"
             position="Inhaber & Leiter Installation"
             phone="+41 79 892 94 76"
-            email="l.salvatore@lc-gebäudetechnik.ch"
+            email="l.salvatore@lc-gebaeudetechnik.ch"
             description="Vertrauen Sie uns, um Ihre Heizsysteme wieder zum Leben zu erwecken. Wir stellen Wärme und Funktionalität wieder her und sorgen dafür, dass Ihr Raum gemütlich bleibt."
           />
           <Person
@@ -197,7 +197,7 @@ export default function Home() {
             name="Cosimo Ardito"
             position="Inhaber & Leiter Verkauf"
             phone="+41 78 303 07 09"
-            email="c.ardito@lc-gebäudetechnik.ch"
+            email="c.ardito@lc-gebaeudetechnik.ch"
             description="Regelmässige Wartung ist der Schlüssel zur optimalen Leistung. Unsere gründlichen Inspektionen sorgen dafür, dass Ihre Systeme das ganze Jahr über reibungslos laufen."
           />
         </div>
