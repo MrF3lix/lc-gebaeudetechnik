@@ -6,23 +6,33 @@ instance. The site fetches it at request time (with a 60s cache), and it's
 edited through PocketBase's own admin dashboard — no custom login/editor was
 built.
 
-## 1. Deploy PocketBase on your VPS
+## 1. Deploy PocketBase (Coolify)
 
-```bash
-# on the VPS, from a copy of this repo (or just the pocketbase/ folder)
-cd pocketbase
-docker compose up -d --build
-```
+`pocketbase/docker-compose.yml` is set up to be deployed directly as a
+**Docker Compose resource in Coolify**, exposed through Coolify's Traefik at
+`https://backend-lcgt.flooq.io` (HTTP requests get redirected to HTTPS
+automatically via the labels).
 
-This builds a small image that downloads the latest PocketBase release and
-runs it on port 8090, with `pb_data` (the database + uploaded files) and
+Two things to double-check in your Coolify instance before/after deploying,
+since these are the parts that can differ per install:
+
+- The `networks.coolify.external: true` network name — Coolify's shared
+  Traefik network is usually literally named `coolify`; confirm with
+  `docker network ls` on the server if routing doesn't come up.
+- The `tls.certresolver=letsencrypt` label — this is Coolify's default
+  Let's Encrypt resolver name; only change it if you've customized Traefik.
+- DNS: point `backend-lcgt.flooq.io` at the VPS before deploying, so
+  Traefik/Let's Encrypt can issue the certificate.
+
+Deploying builds a small image that downloads the latest PocketBase release
+and runs it, with `pb_data` (the database + uploaded files) and
 `pb_migrations` (the collection schema, committed to this repo) mounted as
 volumes. The collections (`settings`, `features`, `projects`, `team_members`)
 are created automatically on first boot from `pb_migrations/`.
 
-Put this behind your existing reverse proxy / TLS termination (nginx, Caddy,
-Traefik, ...) so it's reachable at a proper HTTPS URL — PocketBase itself
-only serves plain HTTP on port 8090.
+To run it anywhere else instead (a plain VPS without Coolify), drop the
+`networks`/`labels` block, add back `ports: ["8090:8090"]`, and put it behind
+whatever reverse proxy/TLS termination you use there.
 
 ## 2. Create the admin (superuser) login
 
@@ -30,7 +40,7 @@ only serves plain HTTP on port 8090.
 docker compose exec pocketbase /pb/pocketbase superuser upsert you@example.com "a-strong-password"
 ```
 
-This is the login used at `https://your-pocketbase-url/_/` — that dashboard
+This is the login used at `https://backend-lcgt.flooq.io/_/` — that dashboard
 *is* the content editor. There's no separate app login to build or maintain.
 
 ## 3. Seed the initial content (one-off)
@@ -40,7 +50,7 @@ carry over the content that used to be hardcoded (including the existing
 images from `public/assets/images`):
 
 ```bash
-POCKETBASE_URL=https://your-pocketbase-url \
+POCKETBASE_URL=https://backend-lcgt.flooq.io \
 POCKETBASE_SUPERUSER_EMAIL=you@example.com \
 POCKETBASE_SUPERUSER_PASSWORD=a-strong-password \
 node pocketbase/seed.mjs
@@ -56,7 +66,7 @@ locally in `.env.local` for development. See `.env.local.example`.
 
 ## 5. Editing content going forward
 
-Log into `https://your-pocketbase-url/_/` and edit records directly:
+Log into `https://backend-lcgt.flooq.io/_/` and edit records directly:
 
 | Collection | Controls |
 | --- | --- |

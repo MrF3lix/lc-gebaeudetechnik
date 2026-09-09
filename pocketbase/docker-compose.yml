@@ -2,8 +2,28 @@ services:
   pocketbase:
     build: .
     restart: unless-stopped
-    ports:
-      - "8090:8090"
+    expose:
+      - "8090"
     volumes:
       - ./pb_data:/pb/pb_data
       - ./pb_migrations:/pb/pb_migrations
+    networks:
+      - coolify
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=coolify"
+      # http -> https redirect
+      - "traefik.http.routers.lcgt-backend-http.rule=Host(`backend-lcgt.flooq.io`)"
+      - "traefik.http.routers.lcgt-backend-http.entrypoints=http"
+      - "traefik.http.routers.lcgt-backend-http.middlewares=lcgt-backend-redirect"
+      - "traefik.http.middlewares.lcgt-backend-redirect.redirectscheme.scheme=https"
+      # https
+      - "traefik.http.routers.lcgt-backend-https.rule=Host(`backend-lcgt.flooq.io`)"
+      - "traefik.http.routers.lcgt-backend-https.entrypoints=https"
+      - "traefik.http.routers.lcgt-backend-https.tls=true"
+      - "traefik.http.routers.lcgt-backend-https.tls.certresolver=letsencrypt"
+      - "traefik.http.services.lcgt-backend.loadbalancer.server.port=8090"
+
+networks:
+  coolify:
+    external: true
