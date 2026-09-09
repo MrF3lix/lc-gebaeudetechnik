@@ -28,6 +28,9 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# pocketbase runtime data (lives on the VPS, not in git)
+pocketbase/pb_data
+
 # vercel
 .vercel
 
